@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Style Jukebox Voting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Jukebox Voting</div>
+            <button class="login-btn" id="loginBtn">Admin Login</button>
+        </header>
+        
+        <div class="admin-controls" id="adminControls">
+            <h3>Admin Controls</h3>
+            <button class="admin-btn" id="playNextBtn">Play Next Song</button>
+            <button class="admin-btn" id="pauseBtn">Pause</button>
+            <button class="admin-btn" id="stopBtn">Stop</button>
+        </div>
+        
+        <div class="now-playing">
+            <div class="now-playing-info">
+                <h2 id="currentSongTitle">No song selected</h2>
+                <p id="currentSongArtist">Cast your votes!</p>
+            </div>
+            <div class="play-controls">
+                <button class="play-btn" id="playBtn">▶</button>
+            </div>
+        </div>
+        
+        <div class="song-list" id="songList">
+            <!-- Songs will be loaded here -->
+        </div>
+    </div>
+    
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-title">Admin Login</div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="administrator" readonly>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn cancel" id="cancelLogin">Cancel</button>
+                <button class="modal-btn login" id="confirmLogin">Login</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
